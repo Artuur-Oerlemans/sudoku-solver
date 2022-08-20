@@ -2,7 +2,8 @@
 
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-from field import Field
+from src.model.field import Field
+from src.model.updatableSudoku import UpdatableSudoku
 
 
 def print_hi(name):
@@ -34,5 +35,8 @@ if __name__ == '__main__':
     ]
 
     print_sudoku(sudoku_1)
+
+    updatableSudoku = UpdatableSudoku(sudoku_1)
+    print(updatableSudoku.is_possible_state())
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
