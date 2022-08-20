@@ -2,6 +2,7 @@
 
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+from field import Field
 
 
 def print_hi(name):
@@ -13,7 +14,7 @@ def print_sudoku(sudoku):
     for y in range(0, 9):
         if y > 0 and y % 3 == 0:
             print(27*'-')
-        line_str = [str(x) for x in sudoku[y]]
+        line_str = [f.to_string() for f in [Field(x) for x in sudoku[y]]]
         print('  '.join(line_str[0: 3]) + " | " + '  '.join(line_str[3: 6]) + " | " + '  '.join(line_str[6: 9]))
 
 
